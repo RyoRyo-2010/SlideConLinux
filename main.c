@@ -66,7 +66,7 @@ int begin_serial( const char *SerialPath, struct termios *tio) {
 		fprintf(stderr,"シリアルポートのファイルをオープンにできませんでした\n");
 		return -3;
 	}
-	// ここから，シリアルポートの設定(https://mcommit.hatenadiary.com/entry/2017/07/09/210840 )
+	// ここから，シリアルポートの設定(参考: https://mcommit.hatenadiary.com/entry/2017/07/09/210840 )
 	tcgetattr(serial_fd,tio);
 	cfmakeraw(tio);
 	tio->c_cflag |= (CREAD | CLOCAL | CS8);
