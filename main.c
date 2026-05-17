@@ -147,7 +147,7 @@ int main(int argc, const char **argv) {
 			if(input_index < inputBufferSize-1) {
 				input_buf[input_index++] = c;
 			}else {
-				fprintf(stderr,"受信バッファが溢れました．バッファを破棄します．\n");
+				fprintf(stderr,"受信バッファが溢れました．バッファを破棄します\n");
 				input_index = 0;
 			}
 		}
